@@ -12,29 +12,27 @@ public class App {
             System.out.println(dataException.getLocalizedMessage());
         } catch (ArraySizeException sizeException) {
             System.out.println(sizeException.getLocalizedMessage());
-        } finally {
-            try {
-                System.out.println("doCalc = " + ArrayValueCalculator.doCalc(arrayNull));
-            } catch (ArrayDataException dataException) {
-                System.out.println(dataException.getLocalizedMessage());
-            } catch (ArraySizeException sizeException) {
-                System.out.println(sizeException.getLocalizedMessage());
-            } finally {
-                try {
-                    System.out.println("doCalc = " + ArrayValueCalculator.doCalc(arrayBig));
-                } catch (ArrayDataException dataException) {
-                    System.out.println(dataException.getLocalizedMessage());
-                } catch (ArraySizeException sizeException) {
-                    System.out.println(sizeException.getLocalizedMessage());
-                }
-                try {
-                    System.out.println("doCalc = " + ArrayValueCalculator.doCalc(arrayBroken));
-                } catch (ArrayDataException dataException) {
-                    System.out.println(dataException.getLocalizedMessage());
-                } catch (ArraySizeException sizeException) {
-                    System.out.println(sizeException.getLocalizedMessage());
-                }
-            }
+        }
+        try {
+            System.out.println("doCalc = " + ArrayValueCalculator.doCalc(arrayNull));
+        } catch (ArrayDataException dataException) {
+            System.out.println(dataException.getLocalizedMessage());
+        } catch (ArraySizeException sizeException) {
+            System.out.println(sizeException.getLocalizedMessage());
+        }
+        try {
+            System.out.println("doCalc = " + ArrayValueCalculator.doCalc(arrayBig));
+        } catch (ArrayDataException dataException) {
+            System.out.println(dataException.getLocalizedMessage());
+        } catch (ArraySizeException sizeException) {
+            System.out.println(sizeException.getLocalizedMessage());
+        }
+        try {
+            System.out.println("doCalc = " + ArrayValueCalculator.doCalc(arrayBroken));
+        } catch (ArrayDataException dataException) {
+            System.out.println(dataException.getLocalizedMessage());
+        } catch (ArraySizeException sizeException) {
+            System.out.println(sizeException.getLocalizedMessage());
         }
     }
 }
